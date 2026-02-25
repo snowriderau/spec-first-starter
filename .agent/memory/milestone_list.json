@@ -1,0 +1,20 @@
+[
+  {
+    "id": "M001",
+    "category": "init",
+    "description": "Project documentation and .agent structure complete",
+    "passes": false
+  },
+  {
+    "id": "M002",
+    "category": "research",
+    "description": "Domain research and technical investigation complete",
+    "passes": false
+  },
+  {
+    "id": "M003",
+    "category": "mvp",
+    "description": "Core MVP feature set implemented and verified",
+    "passes": false
+  }
+]
