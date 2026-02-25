@@ -1,0 +1,27 @@
+---
+description: Enforce spec-first workflow and docs updates for this repository
+alwaysApply: true
+---
+
+# Spec-First Rule
+
+## Core behavior
+
+- Never implement a feature before a spec exists in `.agent/product/specs/`.
+- Before coding, read:
+  - `.agent/product/feature_map.md`
+  - `.agent/memory/task_queue.md`
+  - `.agent/product/architecture.md`
+- If a requested feature has no spec, create one from `.agent/product/specs/_TEMPLATE_spec.md` and ask for approval.
+
+## During implementation
+
+- Follow the spec's `Implementation Tasks` and `Verification` sections.
+- Keep changes scoped to the task being executed.
+- Update status in `.agent/product/feature_map.md`.
+
+## On completion
+
+- Update the feature spec with `Implementation Outcomes`.
+- Record key learnings in `.agent/memory/active_state.md` when architecture or process changed.
+- Keep documentation aligned with shipped behavior.

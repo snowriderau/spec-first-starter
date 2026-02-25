@@ -37,6 +37,15 @@ Most AI coding sessions start with "just build it" and end with rework. This fra
     ├── loop.md          # /loop — autonomous task execution
     ├── new_feature.md   # /new_feature — spec-first dev
     └── success.md       # /success — commit & finalize
+
+.cursor/                 # Cursor rules to enforce spec-first behavior
+└── rules/
+    └── spec-first.mdc
+
+.codex/                  # Lightweight Codex-local skill setup
+└── skills/
+    └── spec-first-lite/
+        └── SKILL.md
 ```
 
 ## Three Core Workflows
@@ -57,6 +66,20 @@ Most AI coding sessions start with "just build it" and end with rework. This fra
 6. **Break down** features in `product/feature_map.md`
 7. **Queue tasks** in `memory/task_queue.md`
 8. **Run** `/new_feature` to start your first feature
+
+## Cursor + Codex Setup
+
+This starter now includes:
+
+- `.cursor/rules/spec-first.mdc` to keep Cursor aligned with spec-first flow
+- `.agent/README.md` as a quick navigation index for docs/workflows
+- `.codex/skills/spec-first-lite/SKILL.md` for lightweight Codex skill behavior
+
+Recommended steps:
+
+1. Open the repository root in Cursor (or your preferred editor)
+2. In Cursor, enable project rules so `.cursor/rules/spec-first.mdc` is applied
+3. Start with `.agent/product/problem.md`, then run your first `/new_feature` flow
 
 ## The Spec-First Cycle
 
