@@ -34,15 +34,17 @@ Most AI coding sessions start with "just build it" and end with rework. This fra
 │   └── example-skill/
 │
 └── workflows/           # Slash-command workflows
+    ├── discovery.md     # /discovery — vision, personas, requirements
     ├── loop.md          # /loop — autonomous task execution
     ├── new_feature.md   # /new_feature — spec-first dev
     └── success.md       # /success — commit & finalize
 ```
 
-## Three Core Workflows
+## Four Core Workflows
 
 | Command | What It Does |
 |---------|-------------|
+| `/discovery` | **Vision → Personas → Requirements.** Interactive discovery flow to initialise a new project with problem statement, user personas, and requirements. |
 | `/new_feature` | **Understand → Design → Approve → Implement → Verify.** Enforces spec-first development with UX mockups before code. |
 | `/loop` | **Autonomous task execution.** Picks tasks from the queue, claims them, executes, and moves to the next. Supports multi-agent coordination. |
 | `/success` | **Commit, update docs, capture learnings.** Runs after completing a feature — updates feature map, spec outcomes, and active state. |
