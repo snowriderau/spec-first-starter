@@ -71,20 +71,17 @@ Mark the feature as ✅ Done in `.agent/product/feature_map.md`:
 
 ## 6. Update Feature Spec
 
-**Specs are living documents, not throwaway planning artifacts.** They serve as the permanent documentation for each feature and should reflect what was actually built.
+**Specs are living documents, not throwaway planning artifacts.** They serve as the permanent documentation for each feature and MUST describe what is currently in production.
 
-If the completed work has a spec in `.agent/product/specs/`, update it with:
+If the completed work has a spec in `.agent/product/specs/`, completely overhaul it:
 
-1. **Set status** to `✅ Done (YYYY-MM-DD)` and add commit hashes
-2. **Add an `## Implementation Outcomes` section** at the bottom covering:
-   - Actual results and metrics (e.g. rows inserted, success rates, performance)
-   - Any deviations from the original design and why
-   - Bug fixes or learnings discovered during implementation
-   - Files modified with a summary of changes
-   - Remaining next steps or follow-up work
-3. **Do NOT delete** the original design sections — they provide context for why decisions were made
+1. **Set status** to `✅ Done (YYYY-MM-DD)` or `Living Reference`.
+2. **Rewrite the document** to act as a single, complete specification of what is actually built and running.
+3. **Delete outdated "Next Steps", "Implementation Status", or "Planning" sections.** If a feature changed during implementation, rewrite the section so it describes what exists now.
+4. **Do NOT append an "Implementation Outcomes" or "Updates" log.** This is not a change tracker; it is a source of truth.
+5. If there are future ideas, put them in a dedicated `Future Enhancements` section.
 
-> The spec goes from "what we planned" → "what we built". Future agents and conversations reference specs to understand the feature, not the implementation plan.
+> A spec goes from "what we plan to build" -> "how it currently works in production." Future agents use specs as reference manuals, so outdated plans cause bad follow-on work.
 
 ---
 
