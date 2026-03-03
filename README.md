@@ -14,6 +14,8 @@ Most AI coding sessions start with "just build it" and end with rework. This fra
 
 ```
 .agent/
+├── README.md            # Quick navigation index
+│
 ├── memory/              # Runtime state — what's happening now
 │   ├── active_state.md  # Context, decisions, learnings
 │   ├── task_queue.md    # Task claiming & execution
@@ -37,17 +39,19 @@ Most AI coding sessions start with "just build it" and end with rework. This fra
     ├── discovery.md     # /discovery — vision, personas, requirements
     ├── loop.md          # /loop — autonomous task execution
     ├── new_feature.md   # /new_feature — spec-first dev
+    ├── update_feature.md # /update_feature — evolve existing feature specs + impl
     └── success.md       # /success — commit & finalize
 ```
 
-## Four Core Workflows
+## Five Core Workflows
 
 | Command | What It Does |
 |---------|-------------|
 | `/discovery` | **Vision → Personas → Requirements.** Interactive discovery flow to initialise a new project with problem statement, user personas, and requirements. |
 | `/new_feature` | **Understand → Design → Approve → Implement → Verify.** Enforces spec-first development with UX mockups before code. |
+| `/update_feature` | **Read existing spec → append update plan → approve → implement.** Use when a feature already has a spec and needs improvement or extension. |
 | `/loop` | **Autonomous task execution.** Picks tasks from the queue, claims them, executes, and moves to the next. Supports multi-agent coordination. |
-| `/success` | **Commit, update docs, capture learnings.** Runs after completing a feature — updates feature map, spec outcomes, and active state. |
+| `/success` | **Commit, update docs, consolidate specs.** Runs after completing a feature — updates feature map, rewrites the spec as the single source of truth for what is live, and captures learnings. |
 
 ## Quick Start
 
@@ -59,6 +63,7 @@ Most AI coding sessions start with "just build it" and end with rework. This fra
 6. **Break down** features in `product/feature_map.md`
 7. **Queue tasks** in `memory/task_queue.md`
 8. **Run** `/new_feature` to start your first feature
+9. **Run** `/update_feature` when improving a feature that already has a spec
 
 ## The Spec-First Cycle
 
@@ -68,8 +73,12 @@ Most AI coding sessions start with "just build it" and end with rework. This fra
   → Phase 2: Design (mock UX → write spec → get approval)
   → Phase 3: Implement (follow spec tasks)
   → Phase 4: Verify (run spec verification)
+/update_feature
+  → Phase 1: Audit existing spec + system state
+  → Phase 2: Add update section + get approval
+  → Phase 3: Implement + regression verification
 /success
-  → Commit → update feature map → update spec with outcomes
+  → Commit → update feature map → consolidate spec into current production reference
 /loop
   → Pick next task → repeat
 ```
@@ -77,7 +86,7 @@ Most AI coding sessions start with "just build it" and end with rework. This fra
 ## Key Principles
 
 - **Never code without a spec** — design first, build second
-- **Specs are living documents** — they evolve from "what we planned" to "what we built"
+- **Specs are living documents** — `/success` keeps each spec as a complete description of what is currently built, not a stale plan log
 - **Task claiming is multi-agent safe** — multiple agents can work the queue simultaneously
 - **Failures are learning** — logged for pattern recognition, not blame
 - **Decisions are recorded** — with dates, in `active_state.md`
